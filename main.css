@@ -1,0 +1,199 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f5f5;
+color:#333;
+}
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:transparent;
+transition:.4s;
+z-index:1000;
+}
+
+.navbar.scrolled{
+background:#0d47a1;
+padding:14px 8%;
+box-shadow:0 4px 15px rgba(0,0,0,.2);
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:white;
+}
+
+.logo span{
+color:#00e5ff;
+}
+
+.nav-links{
+display:flex;
+list-style:none;
+}
+
+.nav-links li{
+margin-left:25px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:white;
+font-size:18px;
+transition:.3s;
+padding:8px 12px;
+border-radius:5px;
+}
+
+.nav-links a:hover{
+background:#00e5ff;
+color:#000;
+}
+
+.menu-btn{
+display:none;
+font-size:25px;
+color:white;
+cursor:pointer;
+}
+
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,.6),
+rgba(0,0,0,.6)),
+url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600")
+center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.btn{
+text-decoration:none;
+background:#00e5ff;
+color:black;
+padding:14px 30px;
+border-radius:30px;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+background:white;
+}
+
+.section{
+padding:100px 8%;
+text-align:center;
+}
+
+.light{
+background:white;
+}
+
+.section h2{
+font-size:40px;
+margin-bottom:20px;
+color:#0d47a1;
+}
+
+.section p{
+font-size:18px;
+line-height:1.8;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.card{
+background:white;
+padding:30px;
+width:280px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card i{
+font-size:45px;
+color:#0d47a1;
+margin-bottom:20px;
+}
+
+footer{
+background:#0d47a1;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+@media(max-width:768px){
+
+.menu-btn{
+display:block;
+}
+
+.nav-links{
+position:absolute;
+top:75px;
+left:-100%;
+background:#0d47a1;
+width:100%;
+flex-direction:column;
+text-align:center;
+transition:.4s;
+}
+
+.nav-links.active{
+left:0;
+}
+
+.nav-links li{
+margin:20px 0;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+}
